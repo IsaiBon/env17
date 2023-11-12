@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Profesores</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<style>
+    /* Estilos para la tabla */
+    body{
+        background-color: #B4BDFF;
+    }
+    h1 {
+        color: #363062;
+
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    /* Estilos para las celdas de encabezado */
+    th {
+      background-color: #83A2FF;
+      border: 1px solid #435585;
+      text-align: left;
+      padding: 8px;
+    }
+
+    /* Estilos para las celdas del cuerpo de la tabla */
+    td {
+      border: 1px solid #435585;
+      text-align: left;
+      padding: 8px;
+    }
+
+  </style>
+<body>
+    <h1>PROFESORES</h1>
+    <table>
+        <thead>
+          <tr>
+            <th>Nombre del Profesor</th>
+            <th>Correo</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for pro in profesores %}
+            <tr>
+              <td>{{ pro.nombre }} {{ pro.apellido }}</td>
+              <td>{{ pro.correo }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    
+</body>
+</html>
